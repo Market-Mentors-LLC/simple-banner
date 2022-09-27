@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) exit;
  * Plugin Name:       Simple Banner
  * Plugin URI:        https://github.com/Market-Mentors-LLC/simple-banner.git
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           0.1.0
+ * Version:           0.2.0
  * Author:            Tyler Seabury
  * Author URI:        https://marketmentors.com/
  * License:           GPL-2.0+
@@ -46,7 +46,7 @@ define('MARKET_MENTORS_SIMPLE_SLIDER_FILE_PATH', __FILE__);
  * Start at version 0.1.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('MARKET_MENTORS_SIMPLE_BANNER_VERSION', '0.1.0');
+define('MARKET_MENTORS_SIMPLE_BANNER_VERSION', '0.2.0');
 
 /**
  * The code that runs during plugin activation.
@@ -59,7 +59,6 @@ register_activation_hook(
     'activate'
   ]
 );
-~
 
 /**
  * The code that runs during plugin deactivation.
