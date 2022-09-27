@@ -34,9 +34,16 @@ class Blade extends \MarketMentors\SimpleSlider\src\ASingleton
 
   private function __construct()
   {
-    // Let's declare the default paths.
-    $this->viewPaths[] = __DIR__ . '/views';
-    $this->compiledViewsPath = __DIR__ . '/views/compiled';
+    // We could declare the default view paths here, 
+    // but let's leave that up to the user to do with 'addViewPath'.
+    // $this->viewPaths[] = realpath(__DIR__ . '/frontend/views');
+    // $this->viewPaths[] = realpath(__DIR__ . '/admin/views');
+
+    // Let's declare the compiled view path to start.
+    $uploads = wp_upload_dir();
+    $this->compiledViewsPath =  $uploads['basedir'] . '/Blade/Compiled/';
+
+    add_action('init', [$this, 'init']);
   }
 
   public function init()
