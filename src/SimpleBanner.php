@@ -202,6 +202,8 @@ class SimpleBanner
     $blade->addViewPath(realpath(__DIR__ . '/frontend/views'));
     $blade->addViewPath(realpath(__DIR__ . '/admin/views'));
 
+    \MarketMentors\SimpleSlider\src\posttypes\Banner::getInstance()->register();
+
   }
 
   /**
