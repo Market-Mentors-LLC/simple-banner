@@ -1,0 +1,2 @@
+{{-- <label for="raw_html_slide_new_tab_toggle">Open in new tab? </label>
+<input type="checkbox" id="raw_html_slide_new_tab_toggle" name="raw_html_slide_new_tab_toggle" '. $toggle_checked .' class="widefat"> --}}
