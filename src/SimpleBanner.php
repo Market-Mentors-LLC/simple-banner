@@ -196,6 +196,12 @@ class SimpleBanner
     $updateChecker->setBranch('master');
 
     $this->loader->run();
+
+    // Basically just instantiating and setting up Blade here.
+    $blade = \MarketMentors\SimpleSlider\src\Blade::getInstance();
+    $blade->addViewPath(realpath(__DIR__ . '/frontend/views'));
+    $blade->addViewPath(realpath(__DIR__ . '/admin/views'));
+
   }
 
   /**
