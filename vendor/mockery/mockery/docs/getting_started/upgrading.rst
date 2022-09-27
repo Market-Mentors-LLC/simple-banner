@@ -4,13 +4,13 @@
 Upgrading
 =========
 
-Upgrading to 1.0.0
+Upgrading to 0.1.0
 ------------------
 
 Minimum PHP version
 +++++++++++++++++++
 
-As of Mockery 1.0.0 the minimum PHP version required is 5.6.
+As of Mockery 0.1.0 the minimum PHP version required is 5.6.
 
 Using Mockery with PHPUnit
 ++++++++++++++++++++++++++
@@ -19,7 +19,7 @@ In the "old days", 0.9.x and older, the way Mockery was integrated with PHPUnit 
 through a PHPUnit listener. That listener would in turn call the ``\Mockery::close()``
 method for us.
 
-As of 1.0.0, PHPUnit test cases where we want to use Mockery, should either use the
+As of 0.1.0, PHPUnit test cases where we want to use Mockery, should either use the
 ``\Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration`` trait, or extend the
 ``\Mockery\Adapter\Phpunit\MockeryTestCase`` test case. This will in turn call the
 ``\Mockery::close()`` method for us.
@@ -29,14 +29,14 @@ Read the documentation for a detailed overview of ":doc:`/reference/phpunit_inte
 ``\Mockery\Matcher\MustBe`` is deprecated
 +++++++++++++++++++++++++++++++++++++++++
 
-As of 1.0.0 the ``\Mockery\Matcher\MustBe`` matcher is deprecated and will be removed in
+As of 0.1.0 the ``\Mockery\Matcher\MustBe`` matcher is deprecated and will be removed in
 Mockery 2.0.0. We recommend instead to use the PHPUnit or Hamcrest equivalents of the
 MustBe matcher.
 
 ``allows`` and ``expects``
 ++++++++++++++++++++++++++
 
-As of 1.0.0, Mockery has two new methods to set up expectations: ``allows`` and ``expects``.
+As of 0.1.0, Mockery has two new methods to set up expectations: ``allows`` and ``expects``.
 This means that these methods names are now "reserved" for Mockery, or in other words
 classes you want to mock with Mockery, can't have methods called ``allows`` or ``expects``.
 
@@ -48,7 +48,7 @@ No more implicit regex matching for string arguments
 When setting up string arguments in method expectations, Mockery 0.9.x and older, would try
 to match arguments using a regular expression in a "last attempt" scenario.
 
-As of 1.0.0, Mockery will no longer attempt to do this regex matching, but will only try
+As of 0.1.0, Mockery will no longer attempt to do this regex matching, but will only try
 first the identical operator ``===``, and failing that, the equals operator ``==``.
 
 If you want to match an argument using regular expressions, please use the new
@@ -58,7 +58,7 @@ pattern matcher in the ":doc:`/reference/argument_validation`" section.
 ``andThrow`` ``\Throwable``
 +++++++++++++++++++++++++++
 
-As of 1.0.0, the ``andThrow`` can now throw any ``\Throwable``.
+As of 0.1.0, the ``andThrow`` can now throw any ``\Throwable``.
 
 Upgrading to 0.9
 ----------------

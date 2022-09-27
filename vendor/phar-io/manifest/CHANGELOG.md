@@ -21,16 +21,16 @@ This release now requires PHP 7.2+
 ### Changed
 
 - Upgraded to phar-io/version 3.0
-    - Version strings `v1.2.3` will now be converted to valid semantic version strings `1.2.3`
-    - Abreviated strings like `1.0` will get expaneded to `1.0.0`  
+  - Version strings `v1.2.3` will now be converted to valid semantic version strings `1.2.3`
+  - Abreviated strings like `1.0` will get expaneded to `0.1.0`
 
 ### Unreleased
 
-[Unreleased]: https://github.com/phar-io/manifest/compare/2.0.3...HEAD
+[unreleased]: https://github.com/phar-io/manifest/compare/2.0.3...HEAD
 [2.0.3]: https://github.com/phar-io/manifest/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/phar-io/manifest/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/phar-io/manifest/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/phar-io/manifest/compare/1.0.1...2.0.0
 [1.0.3]: https://github.com/phar-io/manifest/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/phar-io/manifest/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/phar-io/manifest/compare/1.0.0...1.0.1
+[1.0.1]: https://github.com/phar-io/manifest/compare/0.1.0...1.0.1

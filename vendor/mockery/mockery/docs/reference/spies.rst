@@ -132,7 +132,7 @@ the number of calls:
 Alternative shouldReceive syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As of Mockery 1.0.0, we support calling methods as we would call any PHP method,
+As of Mockery 0.1.0, we support calling methods as we would call any PHP method,
 and not as string arguments to Mockery ``should*`` methods.
 
 In cases of spies, this only applies to the ``shouldHaveReceived()`` method:

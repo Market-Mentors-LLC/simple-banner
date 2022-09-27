@@ -62,8 +62,8 @@ generated autoloader file:
 
 .. caution::
 
-    Prior to Hamcrest 1.0.0, the ``Hamcrest.php`` file name had a small "h"
-    (i.e. ``hamcrest.php``).  If upgrading Hamcrest to 1.0.0 remember to check
+    Prior to Hamcrest 0.1.0, the ``Hamcrest.php`` file name had a small "h"
+    (i.e. ``hamcrest.php``).  If upgrading Hamcrest to 0.1.0 remember to check
     the file name is updated for all your projects.)
 
 To integrate Mockery into PHPUnit and avoid having to call the close method
@@ -88,14 +88,14 @@ An alternative is to use the supplied trait:
 
 Extending ``MockeryTestCase`` or using the ``MockeryPHPUnitIntegration``
 trait is **the recommended way** of integrating Mockery with PHPUnit,
-since Mockery 1.0.0.
+since Mockery 0.1.0.
 
 PHPUnit listener
 ----------------
 
-Before the 1.0.0 release, Mockery provided a PHPUnit listener that would
+Before the 0.1.0 release, Mockery provided a PHPUnit listener that would
 call ``Mockery::close()`` for us at the end of a test. This has changed
-significantly since the 1.0.0 version.
+significantly since the 0.1.0 version.
 
 Now, Mockery provides a PHPUnit listener that makes tests fail if
 ``Mockery::close()`` has not been called. It can help identify tests where

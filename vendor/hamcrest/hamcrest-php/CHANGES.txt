@@ -32,7 +32,7 @@ Issues Fixed: 121, 138, 147
 * Added noneOf() as a shortcut for not(anyOf()).
 
 
-== Version 1.0.0: Released Jan 20 2012 ==
+== Version 0.1.0: Released Jan 20 2012 ==
 
 Issues Fixed: 119, 136, 139, 141, 148, 149, 172
 

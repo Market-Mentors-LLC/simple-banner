@@ -20,12 +20,12 @@
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
  * @link       https://marketmentors.com/
- * @since      1.0.0
+ * @since      0.1.0
  *
  * @package    Market_Mentors_Simple_Banner
  */
 
 // If uninstall not called from WordPress, then exit.
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	exit;
+if (!defined('WP_UNINSTALL_PLUGIN')) {
+  exit;
 }

@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) exit;
  * Fired during plugin deactivation
  *
  * @link       https://marketmentors.com/
- * @since      1.0.0
+ * @since      0.1.0
  *
  * @package    Market_Mentors_Simple_Banner
  * @subpackage Market_Mentors_Simple_Banner/includes
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) exit;
  *
  * This class defines all code necessary to run during the plugin's deactivation.
  *
- * @since      1.0.0
+ * @since      0.1.0
  * @package    Market_Mentors_Simple_Banner
  * @subpackage Market_Mentors_Simple_Banner/includes
  * @author     Tyler Seabury <tylerseabury@protonmail.com>
@@ -32,7 +32,7 @@ class Deactivator
    *
    * Long Description.
    *
-   * @since    1.0.0
+   * @since    0.1.0
    */
   public static function deactivate()
   {
