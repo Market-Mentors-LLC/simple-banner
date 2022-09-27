@@ -204,6 +204,14 @@ class SimpleBanner
 
     \MarketMentors\SimpleSlider\src\posttypes\Banner::getInstance()->register();
 
+    add_action('init', [
+      \MarketMentors\SimpleSlider\src\ContentFilter::class,
+      'startOutputBuffer'
+    ], 1);
+    add_action('template_redirect', [
+      \MarketMentors\SimpleSlider\src\ContentFilter::class,
+      'startOutputBuffer'
+    ], 10000);
   }
 
   /**

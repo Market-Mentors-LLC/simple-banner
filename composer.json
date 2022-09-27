@@ -9,7 +9,8 @@
     "illuminate/events": "^8.83",
     "illuminate/filesystem": "^8.83",
     "illuminate/view": "^8.83",
-    "yahnis-elsts/plugin-update-checker": "^4.13"
+    "yahnis-elsts/plugin-update-checker": "^4.13",
+    "kub-at/php-simple-html-dom-parser": "^1.9"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5",
@@ -21,7 +22,7 @@
   "license": "GPLv2",
   "autoload": {
     "psr-4": {
-      "MarketMentors\\SimpleBanner\\": ""
+      "\\MarketMentors\\SimpleBanner\\": ""
     }
   },
   "authors": [
