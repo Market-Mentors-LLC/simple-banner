@@ -1,0 +1,34 @@
+{
+  "name": "market-mentors/simple-banner",
+  "description": "A really simple banner wp plugin.",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.4",
+    "illuminate/container": "^8.83",
+    "illuminate/contracts": "^8.83",
+    "illuminate/events": "^8.83",
+    "illuminate/filesystem": "^8.83",
+    "illuminate/view": "^8.83",
+    "yahnis-elsts/plugin-update-checker": "^4.13"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "brain/monkey": "^2.6"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit ./test/"
+  },
+  "license": "GPLv2",
+  "autoload": {
+    "psr-4": {
+      "MarketMentors\\SimpleBanner\\": ""
+    }
+  },
+  "authors": [
+    {
+      "name": "Tyler Seabury",
+      "email": "tylerseabury@gmail.com",
+      "homepage": "https://marketmentors.com/"
+    }
+  ]
+}
