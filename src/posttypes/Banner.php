@@ -1,8 +1,8 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src\posttypes;
+namespace MarketMentors\SimpleBanner\src\posttypes;
 
-class Banner extends \MarketMentors\SimpleSlider\src\posttypes\PostType
+class Banner extends \MarketMentors\SimpleBanner\src\posttypes\PostType
 {
   protected function __construct()
   {
@@ -42,7 +42,7 @@ class Banner extends \MarketMentors\SimpleSlider\src\posttypes\PostType
       return "<div>Post ID: {$post->ID} is not a post-type of {$this->postTypeSlug}, it is a {$post->post_type}!</div>";
     }
 
-    return \MarketMentors\SimpleSlider\src\Blade::getInstance()->render(
+    return \MarketMentors\SimpleBanner\src\Blade::getInstance()->render(
       'posttype.Banner',
       [
         'post' => $post,

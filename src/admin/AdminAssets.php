@@ -1,6 +1,6 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src\admin;
+namespace MarketMentors\SimpleBanner\src\admin;
 
 if (!defined('ABSPATH')) exit;
 

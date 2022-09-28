@@ -25,10 +25,6 @@ class ComposerStaticInit99f666e5c872630064d0530ff27b6fc7
         array (
             'voku\\' => 5,
         ),
-        '\\' => 
-        array (
-            '\\MarketMentors\\SimpleBanner\\' => 28,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -42,6 +38,10 @@ class ComposerStaticInit99f666e5c872630064d0530ff27b6fc7
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
+        ),
+        'M' => 
+        array (
+            'MarketMentors\\SimpleBanner\\' => 27,
         ),
         'I' => 
         array (
@@ -75,10 +75,6 @@ class ComposerStaticInit99f666e5c872630064d0530ff27b6fc7
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
         ),
-        '\\MarketMentors\\SimpleBanner\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/',
-        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -110,6 +106,10 @@ class ComposerStaticInit99f666e5c872630064d0530ff27b6fc7
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'MarketMentors\\SimpleBanner\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/',
         ),
         'Illuminate\\View\\' => 
         array (

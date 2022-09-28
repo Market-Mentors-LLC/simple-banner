@@ -1,6 +1,6 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src\metaboxes;
+namespace MarketMentors\SimpleBanner\src\metaboxes;
 
 class MultilineTextFieldMetaBox
 {
@@ -117,7 +117,7 @@ class MultilineTextFieldMetaBox
       ];
     }
 
-    $blade = \MarketMentors\SimpleSlider\src\Blade::getInstance();
+    $blade = \MarketMentors\SimpleBanner\src\Blade::getInstance();
     echo $blade->render(
       'metabox.MultilineTextField',
       array(

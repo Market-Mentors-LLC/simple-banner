@@ -22,7 +22,7 @@
   "license": "GPLv2",
   "autoload": {
     "psr-4": {
-      "\\MarketMentors\\SimpleBanner\\": ""
+      "MarketMentors\\SimpleBanner\\": ""
     }
   },
   "authors": [

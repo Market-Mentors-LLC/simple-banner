@@ -1,6 +1,6 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src;
+namespace MarketMentors\SimpleBanner\src;
 
 if (!defined('ABSPATH')) exit;
 
@@ -104,31 +104,11 @@ class SimpleBanner
    */
   private function load_dependencies()
   {
-
     /**
      * The class responsible for orchestrating the actions and filters of the
      * core plugin.
      */
-    require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-market-mentors-simple-banner-loader.php';
-
-    /**
-     * The class responsible for defining internationalization functionality
-     * of the plugin.
-     */
-    require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-market-mentors-simple-banner-i18n.php';
-
-    /**
-     * The class responsible for defining all actions that occur in the admin area.
-     */
-    require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-market-mentors-simple-banner-admin.php';
-
-    /**
-     * The class responsible for defining all actions that occur in the public-facing
-     * side of the site.
-     */
-    require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-market-mentors-simple-banner-public.php';
-
-    $this->loader = new \MarketMentors\SimpleSlider\src\Loader();
+    $this->loader = new \MarketMentors\SimpleBanner\src\Loader();
   }
 
   /**
@@ -143,7 +123,11 @@ class SimpleBanner
   private function set_locale()
   {
 
-    $plugin_i18n = new \MarketMentors\SimpleSlider\src\I18n();
+    /**
+     * The class responsible for defining internationalization functionality
+     * of the plugin.
+     */
+    $plugin_i18n = new \MarketMentors\SimpleBanner\src\I18n();
 
     $this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
   }
@@ -158,7 +142,10 @@ class SimpleBanner
   private function define_admin_hooks()
   {
 
-    $plugin_admin = new \MarketMentors\SimpleSlider\src\admin\AdminAssets($this->get_plugin_name(), $this->get_version());
+    /**
+     * The class responsible for defining all actions that occur in the admin area.
+     */
+    $plugin_admin = new \MarketMentors\SimpleBanner\src\admin\AdminAssets($this->get_plugin_name(), $this->get_version());
 
     $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
     $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
@@ -174,7 +161,11 @@ class SimpleBanner
   private function define_public_hooks()
   {
 
-    $plugin_public = new \MarketMentors\SimpleSlider\src\frontend\FrontendAssets($this->get_plugin_name(), $this->get_version());
+    /**
+     * The class responsible for defining all actions that occur in the public-facing
+     * side of the site.
+     */
+    $plugin_public = new \MarketMentors\SimpleBanner\src\frontend\FrontendAssets($this->get_plugin_name(), $this->get_version());
 
     $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
     $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
@@ -198,18 +189,18 @@ class SimpleBanner
     $this->loader->run();
 
     // Basically just instantiating and setting up Blade here.
-    $blade = \MarketMentors\SimpleSlider\src\Blade::getInstance();
+    $blade = \MarketMentors\SimpleBanner\src\Blade::getInstance();
     $blade->addViewPath(realpath(__DIR__ . '/frontend/views'));
     $blade->addViewPath(realpath(__DIR__ . '/admin/views'));
 
-    \MarketMentors\SimpleSlider\src\posttypes\Banner::getInstance()->register();
+    \MarketMentors\SimpleBanner\src\posttypes\Banner::getInstance()->register();
 
     add_action('init', [
-      \MarketMentors\SimpleSlider\src\ContentFilter::class,
+      \MarketMentors\SimpleBanner\src\ContentFilter::class,
       'startOutputBuffer'
     ], 1);
     add_action('template_redirect', [
-      \MarketMentors\SimpleSlider\src\ContentFilter::class,
+      \MarketMentors\SimpleBanner\src\ContentFilter::class,
       'startOutputBuffer'
     ], 10000);
   }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MarketMentors\SimpleSlider\test;
+namespace MarketMentors\SimpleBanner\test;
 
 use \PHPUnit\Framework\TestCase;
 use \Brain\Monkey\Functions;
@@ -17,14 +17,14 @@ final class BannerTest extends TestCase
     Functions\when('wp_timezone_string')->justReturn('America/New_York');
     Functions\when('get_theme_mod')->justReturn('false');
 
-    $banner = \MarketMentors\SimpleSlider\src\Banner::getInstance();
+    $banner = \MarketMentors\SimpleBanner\src\Banner::getInstance();
 
     $this->assertInstanceOf(
-      \MarketMentors\SimpleSlider\src\ASingleton::class,
+      \MarketMentors\SimpleBanner\src\ASingleton::class,
       $banner
     );
     $this->assertInstanceOf(
-      \MarketMentors\SimpleSlider\src\Banner::class,
+      \MarketMentors\SimpleBanner\src\Banner::class,
       $banner
     );
   }
@@ -33,7 +33,7 @@ final class BannerTest extends TestCase
   {
     Functions\when('wp_timezone_string')->justReturn('America/New_York');
     Functions\when('get_theme_mod')->justReturn('false');
-    $banner = \MarketMentors\SimpleSlider\src\Banner::getInstance();
+    $banner = \MarketMentors\SimpleBanner\src\Banner::getInstance();
 
     $this->assertEquals(
       $banner->enabled,
@@ -55,7 +55,7 @@ final class BannerTest extends TestCase
   {
     Functions\when('wp_timezone_string')->justReturn('America/New_York');
     Functions\when('get_theme_mod')->justReturn('false');
-    $banner = \MarketMentors\SimpleSlider\src\Banner::getInstance();
+    $banner = \MarketMentors\SimpleBanner\src\Banner::getInstance();
 
     $this->assertEquals(
       (new \DateTime(
@@ -76,7 +76,7 @@ final class BannerTest extends TestCase
     // Perhaps needs more instances of bad strings.
     $filePath = realpath('./test/mockData/') . '/badDateTimes.txt';
     // Read in the test data
-    $dtStrings = \MarketMentors\SimpleSlider\src\Utilities::fReadLines($filePath);
+    $dtStrings = \MarketMentors\SimpleBanner\src\Utilities::fReadLines($filePath);
 
     if (empty($dtStrings)) throw new \Exception(
       'Failed to read test data.'
@@ -111,7 +111,7 @@ final class BannerTest extends TestCase
     });
     Functions\when('\set_theme_mod')->justReturn();
 
-    $banner = \MarketMentors\SimpleSlider\src\Banner::getInstance();
+    $banner = \MarketMentors\SimpleBanner\src\Banner::getInstance();
 
     $this->assertFalse($banner->enabled);
     $this->assertEquals(

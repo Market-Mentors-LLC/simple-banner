@@ -1,6 +1,6 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src\metaboxes;
+namespace MarketMentors\SimpleBanner\src\metaboxes;
 
 class TextFieldMetaBox
 {
@@ -75,7 +75,7 @@ class TextFieldMetaBox
       $value = $data->value;
     }
 
-    $blade = \MarketMentors\SimpleSlider\src\Blade::getInstance();
+    $blade = \MarketMentors\SimpleBanner\src\Blade::getInstance();
     echo $blade->render(
       'metabox.TextField',
       array(

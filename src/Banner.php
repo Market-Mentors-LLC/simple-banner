@@ -1,10 +1,10 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src;
+namespace MarketMentors\SimpleBanner\src;
 
 if (!defined('ABSPATH')) exit;
 
-class Banner extends \MarketMentors\SimpleSlider\src\ASingleton
+class Banner extends \MarketMentors\SimpleBanner\src\ASingleton
 {
 
   protected function __construct()
@@ -183,7 +183,7 @@ class Banner extends \MarketMentors\SimpleSlider\src\ASingleton
   public function render()
   {
     if ($this->enabled && !empty($this->bannerContent)) {
-      return \MarketMentors\SimpleSlider\src\Blade::getInstance()->render(
+      return \MarketMentors\SimpleBanner\src\Blade::getInstance()->render(
         'Banner',
         [
           "bannerContent" => $this->getBannerContent()

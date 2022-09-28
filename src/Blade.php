@@ -1,6 +1,6 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src;
+namespace MarketMentors\SimpleBanner\src;
 
 if (!defined('ABSPATH')) exit;
 
@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) exit;
  *
  * @source https://github.com/illuminate/view
  */
-class Blade extends \MarketMentors\SimpleSlider\src\ASingleton
+class Blade extends \MarketMentors\SimpleBanner\src\ASingleton
 {
   // Configuration: Note that you can set several directories where your templates are located
   private $viewPaths = array();
@@ -32,7 +32,7 @@ class Blade extends \MarketMentors\SimpleSlider\src\ASingleton
     return $this->viewPaths;
   }
 
-  private function __construct()
+  protected function __construct()
   {
     // We could declare the default view paths here, 
     // but let's leave that up to the user to do with 'addViewPath'.

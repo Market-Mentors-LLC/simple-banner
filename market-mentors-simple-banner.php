@@ -55,7 +55,7 @@ define('MARKET_MENTORS_SIMPLE_BANNER_VERSION', '0.2.0');
 register_activation_hook(
   __FILE__,
   [
-    \MarketMentors\SimpleSlider\src\Activator::class,
+    \MarketMentors\SimpleBanner\src\Activator::class,
     'activate'
   ]
 );
@@ -67,7 +67,7 @@ register_activation_hook(
 register_deactivation_hook(
   __FILE__,
   [
-    \MarketMentors\SimpleSlider\src\Deactivator::class,
+    \MarketMentors\SimpleBanner\src\Deactivator::class,
     'deactivate'
   ]
 );
@@ -77,7 +77,7 @@ register_deactivation_hook(
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-$plugin = new \MarketMentors\SimpleSlider\src\SimpleBanner();
+$plugin = new \MarketMentors\SimpleBanner\src\SimpleBanner();
 
 /**
  * Begins execution of the plugin.

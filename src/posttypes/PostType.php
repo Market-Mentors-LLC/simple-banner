@@ -1,10 +1,10 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src\posttypes;
+namespace MarketMentors\SimpleBanner\src\posttypes;
 
 class PostType
-extends \MarketMentors\SimpleSlider\src\ASingleton
-implements \MarketMentors\SimpleSlider\src\posttypes\IPostType
+extends \MarketMentors\SimpleBanner\src\ASingleton
+implements \MarketMentors\SimpleBanner\src\posttypes\IPostType
 {
 
   protected $postTypeSlug;

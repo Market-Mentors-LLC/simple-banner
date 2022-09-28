@@ -1,6 +1,6 @@
 <?php
 
-namespace MarketMentors\SimpleSlider\src\posttypes;
+namespace MarketMentors\SimpleBanner\src\posttypes;
 
 interface IPostType
 {
